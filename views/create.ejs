@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Create New Blog</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row content">
+        <%- include("partials/navbar.ejs") %>
+         <div class="col-sm-9">
+            <h2>Please enter your article details bellow</h2>
+            <hr>
+            <form action="/create" method="POST" >
+              <div class="mb-3">
+                <label  class="form-label">Author</label>
+                <input  type="text" name="aAuthor" class="form-control" id="formGroupExampleInput" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Title</label>
+                <input type="text" name="aTitle" class="form-control" id="formGroupExampleInput" placeholder="Title" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Content</label>
+                <textarea type="text"  name="aText" class="form-control" id="formGroupExampleInput" placeholder="Enter you post content" required></textarea>
+              </div>
+              <br>
+              <div class="mb-3">
+                <button class="btn btn-primary"  type="submit" >Create</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>  
+  <%- include("partials/footer.ejs") %>
